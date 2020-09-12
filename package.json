@@ -1,0 +1,13 @@
+{
+  "name": "report-gen-carbone.io",
+  "version": "0.1.0",
+  "description": "Prerequisite to run carbone.io based on gearmand",
+  "main": "index.js",
+  "author": "Bayu Permadi <irwanhikmah@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gearman": "^2.1.0",
+    "carbone": "^2.1.0",
+    "fs-extra": "^9.0.1"
+  }
+}
