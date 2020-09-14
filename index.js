@@ -8,14 +8,13 @@ let worker = gearman('192.168.1.203', 4730)
 worker.on('JOB_ASSIGN', function(job) {
     console.log(job.func_name + ' job assigned to this worker')
     var messages = job.payload.toString()
+    var dataParse = JSON.parse(messages)
 
-    var options = {
-        convertTo : 'pdf' //can be docx, txt, ...
-    };
+    var options = dataParse['option']
+    var data = dataParse['data']
+    var template = dataParse['template']['path']
 
-    var data = JSON.parse(messages)
-
-    carbone.render('./node_modules/carbone/examples/simple.odt', data, options, function(err, result){
+    carbone.render(template, data, options, function(err, result){
         if (err) return console.log(err);
         fs.writeFileSync('result.pdf', result);
     });

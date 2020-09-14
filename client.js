@@ -1,6 +1,6 @@
 const gearman = require('gearman');
  
-let client = gearman("localhost", 4730 , {timeout: 60000})  // timeout in milliseconds. 
+let client = gearman("192.168.1.203", 4730 , {timeout: 60000})  // timeout in milliseconds. 
  
 // handle timeout 
 client.on('timeout', function() {
@@ -16,12 +16,101 @@ client.on('WORK_COMPLETE', function(job) {
 })
  
 var message = {
-    firstname : 'John',
-    lastname : 'Doe'
+    option : {
+        convertTo : 'pdf'
+    },
+    data :[ 
+            { 
+            movieName : 'John',
+            actors : [ 
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' },
+                    { firstname: 'Bayu', lastname: 'Ganteng' }
+                ]
+            },
+            { 
+            movieName : 'John1',
+            actors : [
+                    { firstname: 'Bayu1', lastname: 'Ganteng1' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu2', lastname: 'Ganteng2' },
+                    { firstname: 'Bayu3', lastname: 'Ganteng3' },
+                ]
+            }
+    ],
+    template : {
+        path : './node_modules/carbone/examples/movies.docx'
+    }
   };
-
-
-console.log(JSON.stringify(message))
 
 // connect to the gearman server
 client.connect(function() {
