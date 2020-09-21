@@ -25,7 +25,6 @@ function generateReport(job, messages){
 
     // go back to sleep, telling the server we're ready for more work
     worker.preSleep()
-    worker.submitJob('remReportJS', fullpath)
 }
 
 function removeReport() {
