@@ -8,6 +8,8 @@
   "dependencies": {
     "gearman": "^2.1.0",
     "carbone": "^2.1.0",
-    "fs-extra": "^9.0.1"
+    "fs-extra": "^9.0.1",
+    "cron": "^1.8.2",
+    "uuid": "^8.3.0"
   }
 }
