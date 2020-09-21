@@ -59,8 +59,7 @@ worker.connect(function(){
     worker.preSleep()
 });
 
-
-var job = new CronJob('*/15 * * * * *', function() {
+var job = new CronJob('59 59 23 * * *', function() {
     removeReport()
     }, null, true, 'Asia/Singapore');
 job.start();
